@@ -1,4 +1,6 @@
 "use client";
+// Treaduções
+import { useTranslations } from 'next-intl';
 
 import React, {
   createContext,
@@ -150,31 +152,32 @@ export default function AppContextProvider({
   children,
 }: {
   children: React.ReactNode;
-}) {
+  }) {
+  const t = useTranslations('sidebar');
   const [mainMenuItems, setMainMenuItems] = useState<MenuItem[]>([
     {
       icon: LuLayoutDashboard,
-      label: "Dashboard",
+      label: t('dashboard')?? "Dashboard",
       isSelected: true,
     },
     {
       icon: MdHistory,
-      label: "History",
+      label: t('history')?? "History",
       isSelected: false,
     },
     {
       icon: TbTemplate,
-      label: "Templates",
+      label: t('templates')?? "Templates",
       isSelected: false,
     },
     {
       icon: MdFavorite,
-      label: "Favorite Templates",
+      label: t('favorites')?? "Favorite Templates",
       isSelected: false,
     },
     {
       icon: MdFavorite,
-      label: "Subscriptions",
+      label: t('subscriptions')?? "Subscriptions",
       isSelected: false,
     },
   ]);
@@ -182,11 +185,11 @@ export default function AppContextProvider({
   const [secondMenuItems, setSecondMenuItems] = useState<MenuItem[]>([
     {
       icon: MdDarkMode,
-      label: "Dark Mode",
+      label: t('darkMode')?? "Dark Mode",
     },
     {
       icon: MdLogout,
-      label: "Log Out",
+      label: t('logout')?? "Log Out",
     },
   ]);
 

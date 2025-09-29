@@ -10,9 +10,9 @@ import SideBar from "./SideBar/SideBar";
 import FavoriteTemplates from "./FavoriteTemplates/FavoriteTemplates";
 import AllTemplatesPage from "./Templates/AllTemplatesPage.tsx";
 import { Toaster } from "react-hot-toast";
-import ConfirmationWindow from "../Windows/DeleteConfirmationWindow";
+import ConfirmationWindow from "@/src/Windows/DeleteConfirmationWindow";
 import SubscriptionPlans from "./subscription/SubscriptionPage";
-import PaymentWindow from "../Windows/PayementWindow";
+import PaymentWindow from "@/src/Windows/PayementWindow";
 
 export default function Page() {
   const {

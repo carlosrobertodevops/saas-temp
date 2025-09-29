@@ -2,8 +2,8 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import LeftSection from "./LeftSection/LeftSection";
 import RightSection from "./RightSection/RightSection";
-import { useAppContext } from "@/app/AppContext";
-import { SingleTemplate } from "@/app/types/AppType";
+import { useAppContext } from "@/src/app/AppContext";
+import { SingleTemplate } from "@/src/types/AppType";
 
 function ContentGeneratorForm() {
   const {
@@ -19,7 +19,7 @@ function ContentGeneratorForm() {
     <div
       className={` ${
         isDarkMode ? "bg-slate-800 border border-slate-600" : "bg-white border"
-      }     left-1/2 top-5 -translate-x-1/2 z-50  
+      }     left-1/2 top-5 -translate-x-1/2 z-50
         w-[95%] rounded-lg flex gap-2 shadow-lg  ${
           openContentGeneratorForm ? "fixed" : "hidden"
         } ${

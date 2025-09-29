@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 // Importing the useAppContext hook from the AppContext file
-import { useAppContext } from "@/app/AppContext";
+import { useAppContext } from "@/src/app/AppContext";
 
 // MainSection component
 function MainSection() {

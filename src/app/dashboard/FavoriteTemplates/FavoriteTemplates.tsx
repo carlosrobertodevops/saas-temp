@@ -1,7 +1,7 @@
-import { useAppContext } from "@/app/AppContext";
+import { useAppContext } from "@/src/app/AppContext";
 import React from "react";
 import MainHeader from "../MainHeader";
-import TemplateSingleCard from "../Templates/Components/TemplateSingleCard";
+import TemplateSingleCard from "@/src/app/dashboard/Templates/Components/TemplateSingleCard";
 import { TbMoodEmpty } from "react-icons/tb";
 
 function FavoriteTemplates() {

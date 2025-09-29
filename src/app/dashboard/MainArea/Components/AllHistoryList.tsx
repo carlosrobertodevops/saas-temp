@@ -4,14 +4,14 @@ import React from "react";
 import { LuHistory } from "react-icons/lu"; // Example icons, replace with actual icons if needed
 import { MdDelete } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa";
-import { useAppContext } from "@/app/AppContext";
+import { useAppContext } from "@/src/app/AppContext";
 import { FaRegCopy } from "react-icons/fa";
 import SingleHistoryItem, {
   countWords,
   formatIsoDate,
   truncateString,
 } from "../../Hisotry/Components/SingleHistoryItem";
-import { HistoryData } from "@/app/types/AppType";
+import { HistoryData } from "@/src/types/AppType";
 import { convertFromTextToReactNode } from "../../ContentGenerator/LeftSection/LeftSection";
 import toast from "react-hot-toast";
 const AllHistoryList = () => {

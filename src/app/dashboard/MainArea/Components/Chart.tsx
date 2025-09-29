@@ -12,9 +12,9 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { useAppContext } from "@/app/AppContext";
-import StatsDropDown from "@/app/DropDowns/StatsDropDown";
-import DaysDropDown from "@/app/DropDowns/DaysDropDown";
+import { useAppContext } from "@/src/app/AppContext";
+import StatsDropDown from "@/src/app/DropDowns/StatsDropDown";
+import DaysDropDown from "@/src/app/DropDowns/DaysDropDown";
 import {
   formatAndAggregateAverageWords,
   formatAndAggregateTimeSaved,
@@ -22,7 +22,7 @@ import {
   formatAndCountDocuments,
   newHistoryData,
   sortAndShortenMonth,
-} from "@/app/LocalData/mainData";
+} from "@/src/LocalData/mainData";
 
 const data = [
   { name: "Day 1", words: 0 },
@@ -44,7 +44,7 @@ const ChartContainer = () => {
         isDarkMode
           ? "bg-slate-800 text-white"
           : "bg-white border border-slate-50"
-      } mx-4 
+      } mx-4
     mt-6`}
     >
       <ChartHeader />
@@ -74,7 +74,7 @@ const ChartContainer = () => {
         <div className="flex gap-2 items-center  ">
           {/* Icon */}
           <div
-            className="  bg-purple-100 rounded-md p-[8px] flex 
+            className="  bg-purple-100 rounded-md p-[8px] flex
         items-center justify-center"
           >
             {getSelectedItem?.icon}

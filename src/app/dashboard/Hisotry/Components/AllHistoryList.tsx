@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { IoIosClose } from "react-icons/io";
 import SingleHistoryItem from "./SingleHistoryItem";
-import { useAppContext } from "@/app/AppContext";
+import { useAppContext } from "@/src/app/AppContext";
 import { SingleTemplateExtended, useAllHistoryContext } from "../AllHistory";
-import { HistoryData, SingleTemplate } from "@/app/types/AppType";
+import { HistoryData, SingleTemplate } from "@/src/types/AppType";
 
 function AllHistoryList() {
   const {

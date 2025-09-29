@@ -1,6 +1,6 @@
 import { IoSparklesSharp } from 'react-icons/io5';
 import TemplatesHeader from './TemplateHeader';
-import { useAppContext } from '@/app/AppContext';
+import { useAppContext } from '@/src/app/AppContext';
 import { v4 as uuidv4 } from 'uuid';
 
 import { FormEvent, ReactNode, useContext, useEffect, useState } from 'react';
@@ -11,7 +11,7 @@ import ContentGeneratorProvider, {
 } from './LeftSectionContext';
 
 import { generateContent } from './leftSectionFunctions';
-import { HistoryData, User } from '@/app/types/AppType';
+import { HistoryData, User } from '@/src/types/AppType';
 import toast from 'react-hot-toast';
 
 import { MdOutlineTitle } from 'react-icons/md';
