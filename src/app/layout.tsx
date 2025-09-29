@@ -5,6 +5,8 @@ import "./globals.css";
 import AppContextProvider from "./AppContext";
 import { ClerkProvider } from "@clerk/nextjs";
 
+import {NextIntlClientProvider} from 'next-intl';
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -33,11 +35,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ClerkProvider>
-        <AppContextProvider>
-          <body className={poppins.variable}>{children}</body>
-        </AppContextProvider>
-      </ClerkProvider>
+      <NextIntlClientProvider>
+        <ClerkProvider>
+          <AppContextProvider>
+            <body className={poppins.variable}>{children}</body>
+          </AppContextProvider>
+        </ClerkProvider>
+      </NextIntlClientProvider>
     </html>
   );
 }

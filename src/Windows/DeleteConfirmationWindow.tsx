@@ -1,7 +1,7 @@
-import { useAppContext } from '@/app/AppContext';
+import { useAppContext } from '@/src/app/AppContext';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { HistoryData } from '../types/AppType';
+import { HistoryData } from '@/src/types/AppType';
 export default function ConfirmationWindow() {
   const [isLoading, setIsLoading] = useState(false);
   const {

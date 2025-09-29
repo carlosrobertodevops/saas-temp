@@ -1,4 +1,4 @@
-import { useAppContext } from "../AppContext";
+import { useAppContext } from "@/src/app/AppContext";
 import { FaCheck } from "react-icons/fa";
 
 export default function PaymentWindow() {
@@ -12,7 +12,7 @@ export default function PaymentWindow() {
   }`;
   return (
     <div
-      className={` 
+      className={`
       w-[38%] max-sm:w-[91%] p-6 fixed  shadow-md  ${darkModeClass} ${
         openPaymentWindow ? "block" : "hidden"
       }

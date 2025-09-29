@@ -19,8 +19,8 @@ import {
   SingleTemplate,
   StatsDropDownItem,
   User,
-} from "./types/AppType";
-import { AppType } from "./types/AppType";
+} from "@/src/types/AppType";
+import { AppType } from "@/src/types/AppType";
 import { MdDarkMode, MdSettings, MdLogout } from "react-icons/md";
 import { MdFavorite } from "react-icons/md";
 // Icons for Dark Mode, Settings, Log Out
@@ -33,11 +33,11 @@ import { RiReplay5Line } from "react-icons/ri";
 import { RiReplay15Line } from "react-icons/ri";
 import { RiReplay30Line } from "react-icons/ri";
 
-import { templatesArray } from "./LocalData/templates";
+import { templatesArray } from "@/src/LocalData/templates";
 import { SingleTemplateExtended } from "./dashboard/Hisotry/AllHistory";
-import { newHistoryData } from "./LocalData/mainData";
+import { newHistoryData } from "@/src/LocalData/mainData";
 
-import { templatesFilteringItemsArray } from "./LocalData/templateFilteringItems";
+import { templatesFilteringItemsArray } from "@/src/LocalData/templateFilteringItems";
 import { useUser } from "@clerk/nextjs";
 
 // Define the default state for the context.

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from 'next-intl';
+
 import Link from "next/link";
 
 import Image from "next/image";
@@ -12,6 +14,7 @@ import { FaCog, FaChartBar, FaLock } from "react-icons/fa";
 import { IoCheckmarkCircle, IoClose } from "react-icons/io5";
 
 export default function Home() {
+  const t = useTranslations('Home');
   return (
     <div className="poppins">
       <Navbar />
@@ -60,7 +63,11 @@ function AppLogo() {
 }
 
 function Buttons() {
+  const t = useTranslations('Navbar');
+
   const { userId, isLoaded } = useAuth();
+
+
 
   if (!isLoaded) {
     // Optionally render a loading state
@@ -79,7 +86,7 @@ function Buttons() {
             <button
               className={`max-sm:w-full text-sm border border-purple-600 text-white bg-purple-600 p-[8px] px-6 rounded-md`}
             >
-              Sign In
+              {t('signIn')}
             </button>
           </Link>
 
@@ -87,7 +94,7 @@ function Buttons() {
             <button
               className={`max-sm:w-full text-sm border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white p-[8px] px-6 rounded-md`}
             >
-              Sign Up
+              {t('signUp')}
             </button>
           </Link>
         </>
@@ -97,7 +104,7 @@ function Buttons() {
             className={`max-sm:w-full text-sm border bg-purple-600
             text-white hover:bg-purple-600 hover:text-white p-[8px] px-6 rounded-md`}
           >
-            Dashboard
+              {t('dashboard')}
           </button>
         </Link>
       )}
