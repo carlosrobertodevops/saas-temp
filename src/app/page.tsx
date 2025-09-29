@@ -1,5 +1,6 @@
 "use client";
 
+// Tradução
 import { useTranslations } from 'next-intl';
 
 import Link from "next/link";
@@ -14,6 +15,7 @@ import { FaCog, FaChartBar, FaLock } from "react-icons/fa";
 import { IoCheckmarkCircle, IoClose } from "react-icons/io5";
 
 export default function Home() {
+  // Tradução
   const t = useTranslations('Home');
   return (
     <div className="poppins">
@@ -63,11 +65,10 @@ function AppLogo() {
 }
 
 function Buttons() {
+  // Tradução
   const t = useTranslations('Navbar');
-
+  // Clerk Auth
   const { userId, isLoaded } = useAuth();
-
-
 
   if (!isLoaded) {
     // Optionally render a loading state
@@ -104,7 +105,7 @@ function Buttons() {
             className={`max-sm:w-full text-sm border bg-purple-600
             text-white hover:bg-purple-600 hover:text-white p-[8px] px-6 rounded-md`}
           >
-              {t('dashboard')}
+            {t('dashboard')}
           </button>
         </Link>
       )}
@@ -113,57 +114,56 @@ function Buttons() {
 }
 
 function CTASection() {
+  // Tradução
+  const t = useTranslations('Home');
+
   return (
     <div className="flex flex-col mx-16 items-center mt-[120px] gap-6">
       <h2 className="font-bold text-2xl text-center">
-        Boost Your Content Creation
-        <span className="text-purple-600"> with Ease and Precision!</span>
+        {t('heroTitleA')}
+        <span className="text-purple-600"> {t('heroTitleB')}</span>
       </h2>
       <p className="text-center text-sm w-[550px] max-sm:w-full text-slate-500">
-        Generate high-quality content effortlessly. With customizable templates,
-        real-time analytics, and flexible subscription options, you’ll have
-        everything you need to elevate your content strategy. Get started and
-        see the difference!
+        {t('generateHighQuality')}
       </p>
       <button
         className="block px-9 py-3 text-sm font-medium text-white bg-purple-600
         transition focus:outline-none rounded-lg hover:bg-primary-dark"
         type="button"
       >
-        {`Start Creating Now!`}
+        {t('startCreatingNow')}
       </button>
     </div>
   );
 }
 
 function KeyFeatures() {
+  // Tradução
+  const t = useTranslations('Home');
+
   const features = [
     {
-      title: "Customized Content Generation",
-      description:
-        "Create tailored content easily with our customizable templates and options, including dropdowns and validation to ensure high-quality results.",
+      title: t('customized_content_generation'),
+      description: t('customized_content_generation_description'),
       icon: <FaCog size={24} />,
     },
     {
-      title: "Real-Time Analytics Dashboard",
-      description:
-        "Track your content generation with a comprehensive dashboard displaying real-time statistics, visual charts, and a recent history section in a responsive layout.",
+      title: t('real_time_analytics_dashboard'),
+      description:t('real_time_analytics_dashboard_description'),
       icon: <FaChartBar size={24} />,
     },
     {
-      title: "Flexible Subscription and Usage Tracking",
-      description:
-        "Enjoy a free plan with word count tracking and upgrade to pro for unlimited content generation. Restrictions on the free plan encourage flexibility and choice.",
+      title: t('flexible_subscription_racking'),
+      description: t('flexible_subscription_racking_dashboard'),
       icon: <FaLock size={24} />,
     },
   ];
 
   return (
     <div className="mt-12 text-center bg-slate-50 p-14">
-      <h2 className="text-2xl font-bold mb-6">Key Features</h2>
+      <h2 className="text-2xl font-bold mb-6">{t('keyFeatures')}</h2>
       <p className="text-slate-500 mb-10">
-        Explore powerful features designed to simplify content creation and
-        management.
+        {t('featuresSubtitle')}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-7">
         {features.map((feature, index) => (
@@ -174,7 +174,7 @@ function KeyFeatures() {
               </div>
             </div>
             <h3 className="mt-9 font-semibold text-[18px]">{feature.title}</h3>
-            <p className="text-slate-500 mt-3 text-sm">{feature.description}</p>
+            <p className="text-slate-600 mt-3 text-sm">{feature.description}</p>
           </div>
         ))}
       </div>
@@ -183,39 +183,40 @@ function KeyFeatures() {
 }
 
 function PricingSection() {
+  // Tradução
+  const t = useTranslations('Home');
+
   return (
     <div className="mx-8  text-center p-8 py-14">
-      <h2 className="text-2xl font-bold mb-6">Pricing Plans</h2>
+      <h2 className="text-2xl font-bold mb-6">{t('pricingPlans')}</h2>
       <p className="text-slate-500 mb-8">
-        Choose the plan that suits you best. Enjoy a seamless note-taking
-        experience!
+        {t('pricingSubtitle')}
       </p>
       <div className=" flex justify-center w-full max-sm:flex-col  gap-10 mt-12">
         {/* Free Plan */}
         <PlanCard
-          title="Free Plan"
+          title={t('titleFreePlan')}
           price="$0"
           features={[
-            "Access to 5 Templates",
-            "Generate up to 1,000 words per month",
-            "Basic Customer Support",
-            "Standard Content Tone",
-            "Limited Word Count Tracking",
+            t('free_plan_access_to_5_templates'),
+            t('free_plan_generate_up_to_1000'),
+            t('free_plan_basicCustomerSupport'),
+            t('free_plan_standardContentTone'),
+            t('free_plan_limited_word_count_tracking')
           ]}
-          buttonLabel="Get Started for Free"
+          buttonLabel={t('buttonLabelFree')}
           isPro={false}
         />
         <PlanCard
-          title="Pro Plan"
+          title={t('titleProPlan')}
           price="$9,99"
           features={[
-            "Unlimited Access to All 14 Templates",
-            "Generate up to 100,000 words per month.",
-            "Priority Customer Support",
-            "Custom Content Tone",
-            "Priority Customer Support",
+            t("pro_plan_unlimited_access_to_14_templates"),
+            t("pro_plan_generate_up_to_100000"),
+            t("pro_plan_customContentTone"),
+            t("pro_plan_priorityCustomerSupport")
           ]}
-          buttonLabel="Get Started"
+          buttonLabel={t('buttonLabelPro')}
           isPro={true}
         />
         {/* Pro Plan */}

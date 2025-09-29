@@ -5,6 +5,7 @@ import "./globals.css";
 import AppContextProvider from "./AppContext";
 import { ClerkProvider } from "@clerk/nextjs";
 
+// Tradução
 import {NextIntlClientProvider} from 'next-intl';
 
 const geistSans = localFont({
