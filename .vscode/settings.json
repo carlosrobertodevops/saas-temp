@@ -3,5 +3,14 @@
     "src/i18n",
     "src/messages"
   ],
-  "editor.fontSize": 12
+  "editor.fontSize": 12,
+  "$schema": "https://inlang.com/schema/project-settings",
+  "sourceLanguageTag": "en",
+  "languageTags": ["en", "pt", "es"],
+  "modules": [
+    "https://cdn.jsdelivr.net/npm/@inlang/plugin-next-intl@latest/dist/index.js"
+  ],
+  "plugin.inlang.nextIntl": {
+    "pathPattern": "./src/messages/{languageTag}.json"
+  }
 }
