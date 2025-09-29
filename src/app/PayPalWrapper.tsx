@@ -6,6 +6,7 @@ interface PayPalWrapperProps {
 }
 
 export default function PayPalWrapper({ children }: PayPalWrapperProps) {
+  // ID PayPal
   const paypalClientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
   console.log(paypalClientId);
 
@@ -22,7 +23,6 @@ export default function PayPalWrapper({ children }: PayPalWrapperProps) {
       options={{
         clientId: paypalClientId,
         currency: "USD",
-
         debug: true,
       }}
     >
